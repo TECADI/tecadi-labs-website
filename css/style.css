@@ -16,3 +16,16 @@ h5 {
     -o-background-size: cover;
     background-size: cover;
 }
+
+.button-view {
+    box-sizing: border-box;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    background: linear-gradient(125.56deg, #105EFB 26.72%, rgba(25, 154, 251, 0.85) 91.96%);
+    border: 0px;
+    border-radius: 12px;
+    font-family: 'Comfortaa';
+    color: #FAFAFA;
+}
