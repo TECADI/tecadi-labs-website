@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Sansation Bold';
+    src: url(../assets/fonts/sansation-bold.ttf)
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url(../assets/fonts/comfortaa-regular.ttf)
+}
+
+@font-face {
+    font-family: 'Comfortaa Bold';
+    src: url(../assets/fonts/comfortaa-bold.ttf)
+}
+
+.font-sansation-bold {
+    font-family: 'Sansation Bold';
+}
+
+.font-comfortaa {
+    font-family: 'Comfortaa';
+}
+
+.font-comfortaa-bold {
+    font-family: 'Comfortaa Bold';
+}
