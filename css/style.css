@@ -7,3 +7,12 @@ h4,
 h5 {
     font-family: 'Comfortaa';
 }
+
+.background-home {
+    height: 800px;
+    background: url('../assets/images/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
