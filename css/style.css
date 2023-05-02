@@ -28,4 +28,32 @@ h5 {
     border-radius: 12px;
     font-family: 'Comfortaa';
     color: #FAFAFA;
+    transition: 0.5s;
+}
+
+.button-view:hover {
+    background: transparent;
+    color: #199AFB;
+    border: 1px solid #199AFB;
+    transition: 0.5s;
+}
+
+.button-navbar {
+    box-sizing: border-box;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    background: transparent;
+    border: 1px solid #199AFB;
+    border-radius: 12px;
+    font-family: 'Comfortaa';
+    color: #199AFB;
+    transition: 0.5s;
+}
+
+.button-navbar:hover {
+    background: linear-gradient(125.56deg, #105EFB 26.72%, rgba(25, 154, 251, 0.85) 91.96%);
+    color: #FAFAFA;
+    border: 0px;
+    transition: 0.5s;
 }
