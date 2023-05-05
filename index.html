@@ -72,7 +72,7 @@
 
     </header>
 
-    <section id=" home" class="background-home">
+    <section id="home" class="background-home">
 
         <div class="container">
 
@@ -102,7 +102,7 @@
 
     <main class="container-lg">
 
-        <section id="products">
+        <section id="products" class="reveal">
 
             <div class="container">
 
@@ -171,7 +171,7 @@
 
         </section>
 
-        <section id="about" class="border-top mt-5">
+        <section id="about" class="border-top mt-5 reveal">
 
             <div class="container">
 
@@ -244,7 +244,7 @@
 
         </section>
 
-        <section id="contact" class="border-top mt-5">
+        <section id="contact" class="border-top mt-5 reveal">
 
             <div class="container">
 
@@ -313,7 +313,7 @@
 
     </main>
 
-    <footer class="border-top">
+    <footer class="border-top reveal">
 
         <div class="container mt-5">
 
@@ -349,6 +349,26 @@
         </div>
 
     </section>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+    </script>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

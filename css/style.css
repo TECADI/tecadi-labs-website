@@ -57,3 +57,13 @@ h5 {
     border: 0px;
     transition: 0.5s;
 }
+
+.reveal {
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
