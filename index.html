@@ -281,6 +281,68 @@
                 Entre em contato conosco para discutir suas necessidades e como
                 podemos ajudá-lo.
               </p>
+
+              <form
+                id="contact-form"
+                class="contact-us"
+                onsubmit="sendContactMail(event)"
+              >
+                <div class="d-flex pb-2 justify-content-between contact-inputs">
+                  <div style="width: 47%">
+                    <label>Nome</label>
+                    <input
+                      id="nome"
+                      placeholder="Digite seu nome"
+                      style="width: 100%"
+                    />
+                  </div>
+                  <div style="width: 47%">
+                    <label>E-mail</label>
+                    <input
+                      id="email"
+                      placeholder="Digite seu e-mail"
+                      style="width: 100%"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex pb-2 justify-content-between contact-inputs">
+                  <div style="width: 47%">
+                    <label>Assunto</label>
+                    <input
+                      id="assunto"
+                      placeholder="Digite o assunto"
+                      style="width: 100%"
+                    />
+                  </div>
+                  <div style="width: 47%">
+                    <label>Telefone/Whatsapp</label>
+                    <input
+                      id="telefone"
+                      type="tel"
+                      maxlength="15"
+                      onkeyup="handlePhone(event)"
+                      placeholder="Digite seu Whatsapp ou Telefone"
+                      style="width: 100%"
+                    />
+                  </div>
+                </div>
+                <label>Descrição</label>
+                <textarea
+                  id="descricao"
+                  placeholder="No que podemos lhe ajudar?"
+                  class="w-100"
+                  rows="8"
+                ></textarea>
+                <div class="d-flex justify-content-end">
+                  <button
+                    type="submit"
+                    class="button-view my-3"
+                    style="max-width: 20%; min-width: 200px"
+                  >
+                    Enviar
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
 
@@ -301,12 +363,17 @@
                 Tecnologia com a gente!
               </p>
 
-              <button
-                style="max-width: 20%; min-width: 200px"
-                class="button-view mb-5 w-100"
+              <a
+                href="https://tecadilogistica.vagas.solides.com.br/"
+                target="_blank"
               >
-                visualizar vagas
-              </button>
+                <button
+                  style="max-width: 20%; min-width: 200px"
+                  class="button-view mb-5 w-100"
+                >
+                  visualizar vagas
+                </button>
+              </a>
             </div>
 
             <div
@@ -378,7 +445,81 @@
       <img src="./assets/images/whatsapp.png" alt="Icone do whatsapp" />
     </a>
 
+    <div id="toast"></div>
+
     <script>
+      function sendContactMail(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("assunto").value;
+        const phone = document.getElementById("telefone").value;
+        const body = document.getElementById("descricao").value;
+
+        const message = `
+<html>
+  <div style="max-width: 1220px;">
+    <h1>${subject}</h1>
+    <p>Mensagem enviada através do formulário 'Solicite um Serviço' na plataforma tecadi.labs.</p>
+    <p>Enviado por: ${name}</p>
+    <p>Email: ${email}</p>
+    <p>Telefone: ${phone}</p>
+    <br/>
+    <p>${body}</p>
+  </div>
+</html>`;
+
+        const mailBody = {
+          host_smtp: "cloud27.mailgrid.net.br",
+          senha_smtp: "rkj47fn3rn34e",
+          usuario_smtp: "tecadi@tecadi.com.br",
+          emailRemetente: "no-reply@tecadi.com.br",
+          emailDestino: ["ivan.borba@tecadi.com.br"],
+          assunto: subject,
+          mensagem: message,
+        };
+
+        const headers = new Headers();
+
+        headers.append("Content-Type", "application/json");
+
+        fetch("https://painel.mailgrid.com.br/api/", {
+          method: "POST",
+          mode: "no-cors",
+          headers,
+          body: JSON.stringify(mailBody),
+        })
+          .then((response) => {
+            const toast = document.getElementById("toast");
+
+            toast.innerText = `Obrigado pelo interesse em nossos serviços, entraremos em contato assim que possível!`;
+
+            toast.classList.add("toast-success");
+            toast.classList.add("toast-show");
+
+            document.getElementById("contact-form").reset();
+
+            setTimeout(function () {
+              toast.className = toast.className.replace("toast-show", "");
+              toast.className = toast.className.replace("toast-success", "");
+            }, 4000);
+          })
+          .catch((error) => {
+            const toast = document.getElementById("toast");
+
+            toast.classList.add("toast-error");
+            toast.classList.add("toast-show");
+
+            toast.innerText = `Erro ao enviar e-mail: ${error}`;
+
+            setTimeout(function () {
+              toast.className = toast.className.replace("toast-show", "");
+              toast.className = toast.className.replace("toast-error", "");
+            }, 4000);
+          });
+      }
+
       function scroolToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }

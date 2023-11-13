@@ -195,6 +195,33 @@ textarea {
   width: 60px;
 }
 
+#toast {
+  width: 25rem;
+  visibility: hidden;
+  margin-left: -125px;
+  color: #fff;
+  text-align: center;
+  border-radius: 25px;
+  padding: 16px;
+  position: fixed;
+  z-index: 5;
+  left: 50%;
+  bottom: 30px;
+}
+
+.toast-error {
+  background-color: #ff9494;
+}
+
+.toast-success {
+  background-color: #5cb85c;
+}
+
+.toast-show {
+  visibility: visible !important;
+  animation: fadein 0.5s, fadeout 1s 3s;
+}
+
 @media screen and (max-width: 760px) {
   .mobile-center {
     display: flex;
@@ -227,5 +254,27 @@ textarea {
 
   100% {
     margin-left: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
   }
 }
