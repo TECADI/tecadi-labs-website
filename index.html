@@ -289,7 +289,7 @@
               >
                 <div class="d-flex pb-2 justify-content-between contact-inputs">
                   <div style="width: 47%">
-                    <label>Nome</label>
+                    <label>Nome*</label>
                     <input
                       id="nome"
                       placeholder="Digite seu nome"
@@ -297,7 +297,7 @@
                     />
                   </div>
                   <div style="width: 47%">
-                    <label>E-mail</label>
+                    <label>E-mail*</label>
                     <input
                       id="email"
                       placeholder="Digite seu e-mail"
@@ -307,7 +307,7 @@
                 </div>
                 <div class="d-flex pb-2 justify-content-between contact-inputs">
                   <div style="width: 47%">
-                    <label>Assunto</label>
+                    <label>Assunto*</label>
                     <input
                       id="assunto"
                       placeholder="Digite o assunto"
@@ -315,7 +315,7 @@
                     />
                   </div>
                   <div style="width: 47%">
-                    <label>Telefone/Whatsapp</label>
+                    <label>Telefone/Whatsapp*</label>
                     <input
                       id="telefone"
                       type="tel"
@@ -326,7 +326,7 @@
                     />
                   </div>
                 </div>
-                <label>Descrição</label>
+                <label>Descrição*</label>
                 <textarea
                   id="descricao"
                   placeholder="No que podemos lhe ajudar?"
@@ -457,6 +457,22 @@
         const phone = document.getElementById("telefone").value;
         const body = document.getElementById("descricao").value;
 
+        if (!name || !email || !subject || !phone || body) {
+          const toast = document.getElementById("toast");
+
+          toast.classList.add("toast-error");
+          toast.classList.add("toast-show");
+
+          toast.innerText = `Preencha os campos obrigatórios`;
+
+          setTimeout(function () {
+            toast.className = toast.className.replace("toast-show", "");
+            toast.className = toast.className.replace("toast-error", "");
+          }, 4000);
+
+          return;
+        }
+
         const mailData = {
           name,
           phone,
@@ -475,20 +491,36 @@
           },
           body: JSON.stringify(mailData),
         })
+          .then((res) => res.json())
           .then((response) => {
-            const toast = document.getElementById("toast");
+            if (response.status === 200) {
+              console.log(response);
+              const toast = document.getElementById("toast");
 
-            toast.innerText = `Obrigado pelo interesse em nossos serviços, entraremos em contato assim que possível!`;
+              toast.innerText = `Obrigado pelo interesse em nossos serviços, entraremos em contato assim que possível!`;
 
-            toast.classList.add("toast-success");
-            toast.classList.add("toast-show");
+              toast.classList.add("toast-success");
+              toast.classList.add("toast-show");
 
-            document.getElementById("contact-form").reset();
+              document.getElementById("contact-form").reset();
 
-            setTimeout(function () {
-              toast.className = toast.className.replace("toast-show", "");
-              toast.className = toast.className.replace("toast-success", "");
-            }, 4000);
+              setTimeout(function () {
+                toast.className = toast.className.replace("toast-show", "");
+                toast.className = toast.className.replace("toast-success", "");
+              }, 4000);
+            } else {
+              const toast = document.getElementById("toast");
+
+              toast.classList.add("toast-error");
+              toast.classList.add("toast-show");
+
+              toast.innerText = `Erro ao enviar e-mail: ${response.message}`;
+
+              setTimeout(function () {
+                toast.className = toast.className.replace("toast-show", "");
+                toast.className = toast.className.replace("toast-error", "");
+              }, 4000);
+            }
           })
           .catch((error) => {
             const toast = document.getElementById("toast");
