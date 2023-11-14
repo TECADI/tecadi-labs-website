@@ -457,38 +457,23 @@
         const phone = document.getElementById("telefone").value;
         const body = document.getElementById("descricao").value;
 
-        const message = `
-<html>
-  <div style="max-width: 1220px;">
-    <h1>${subject}</h1>
-    <p>Mensagem enviada através do formulário 'Solicite um Serviço' na plataforma tecadi.labs.</p>
-    <p>Enviado por: ${name}</p>
-    <p>Email: ${email}</p>
-    <p>Telefone: ${phone}</p>
-    <br/>
-    <p>${body}</p>
-  </div>
-</html>`;
-
-        const mailBody = {
-          host_smtp: "cloud27.mailgrid.net.br",
-          senha_smtp: "rkj47fn3rn34e",
-          usuario_smtp: "tecadi@tecadi.com.br",
-          emailRemetente: "no-reply@tecadi.com.br",
-          emailDestino: ["ivan.borba@tecadi.com.br"],
-          assunto: subject,
-          mensagem: message,
+        const mailData = {
+          name,
+          phone,
+          email,
+          subject,
+          body,
         };
 
         const headers = new Headers();
-
         headers.append("Content-Type", "application/json");
 
-        fetch("https://painel.mailgrid.com.br/api/", {
+        fetch("http://localhost:3456/send-contact-email", {
           method: "POST",
-          mode: "no-cors",
-          headers,
-          body: JSON.stringify(mailBody),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(mailData),
         })
           .then((response) => {
             const toast = document.getElementById("toast");
