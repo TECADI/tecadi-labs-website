@@ -5,65 +5,276 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Comfortaa';
+  font-family: "Comfortaa";
+}
+
+label {
+  margin-bottom: 0.3rem;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+input,
+textarea {
+  all: unset;
+  height: 3rem;
+  padding-left: 0.7rem;
+  border: 3px solid #f3f3f3;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 14px;
+}
+
+textarea {
+  padding-top: 0.5rem;
+  height: auto;
 }
 
 .background-home {
-    height: 90vh;
-    background: url('../assets/images/background.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  height: 90vh;
+  background: url("../assets/images/background.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .button-view {
-    box-sizing: border-box;
-    position: absolute;
-    width: 300px;
-    height: 50px;
-    text-align: center;
-    background: linear-gradient(125.56deg, #105EFB 26.72%, rgba(25, 154, 251, 0.85) 91.96%);
-    border: 0px;
-    border-radius: 12px;
-    font-family: 'Comfortaa';
-    color: #FAFAFA;
-    transition: 0.5s;
+  box-sizing: border-box;
+  position: absolute;
+  max-width: 380px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background: linear-gradient(
+    125.56deg,
+    #105efb 26.72%,
+    rgba(25, 154, 251, 0.85) 91.96%
+  );
+  border: 0px;
+  border-radius: 12px;
+  font-family: "Comfortaa";
+  color: #fafafa;
+  transition: 0.5s;
 }
 
 .button-view:hover {
-    background: transparent;
-    color: #199AFB;
-    border: 1px solid #199AFB;
-    transition: 0.5s;
+  background: transparent;
+  color: #199afb;
+  border: 1px solid #199afb;
+  transition: 0.5s;
 }
 
 .button-navbar {
-    box-sizing: border-box;
-    width: 190px;
-    height: 40px;
-    text-align: center;
-    background: transparent;
-    border: 1px solid #199AFB;
-    border-radius: 12px;
-    font-family: 'Comfortaa';
-    color: #199AFB;
-    transition: 0.5s;
+  box-sizing: border-box;
+  width: 190px;
+  height: 40px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #199afb;
+  border-radius: 12px;
+  font-family: "Comfortaa";
+  color: #199afb;
+  transition: 0.5s;
 }
 
 .button-navbar:hover {
-    background: linear-gradient(125.56deg, #105EFB 26.72%, rgba(25, 154, 251, 0.85) 91.96%);
-    color: #FAFAFA;
-    border: 0px;
-    transition: 0.5s;
+  background: linear-gradient(
+    125.56deg,
+    #105efb 26.72%,
+    rgba(25, 154, 251, 0.85) 91.96%
+  );
+  color: #fafafa;
+  border: 0px;
+  transition: 0.5s;
 }
 
 .reveal {
-    opacity: 0;
-    transition: 1s all ease;
+  opacity: 0;
+  transition: 1s all ease;
 }
 
 .reveal.active {
-    transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hexagon-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: -1.5rem;
+  justify-content: center;
+}
+
+.hexagon-row-even {
+  margin-left: -68px;
+}
+
+.hexagon-row-odd {
+  margin-left: 68px;
+}
+
+.hexagon-shadow {
+  width: 128px;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+  position: relative;
+  filter: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+  transform: rotate(0.00000000001deg);
+}
+
+.hexagon-shadow p {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: 1s ease;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+}
+
+.hexagon-shadow:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.hexagon-shadow:hover p {
+  opacity: 1;
+}
+
+.hexagon {
+  width: 128px;
+  height: calc(128px * 1.1547);
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+#contact {
+  margin-top: 5rem;
+}
+
+.back-to-top {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: calc(5rem + 60px);
+  right: 2.1rem;
+  opacity: 0;
+  user-select: none;
+  transition: 1s ease;
+}
+
+.back-to-top img {
+  width: 30px;
+  animation: 1s upAndDown ease-in-out infinite;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.whatsapp img {
+  width: 60px;
+}
+
+#toast {
+  width: 25rem;
+  visibility: hidden;
+  margin-left: -125px;
+  color: #fff;
+  text-align: center;
+  border-radius: 25px;
+  padding: 16px;
+  position: fixed;
+  z-index: 5;
+  left: 50%;
+  bottom: 30px;
+}
+
+.toast-error {
+  background-color: #ff9494;
+}
+
+.toast-success {
+  background-color: #5cb85c;
+}
+
+.toast-show {
+  visibility: visible !important;
+  animation: fadein 0.5s, fadeout 1s 3s;
+}
+
+@media screen and (max-width: 760px) {
+  .mobile-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mobile-center button {
+    position: inherit;
+    align-self: flex-end;
+  }
+
+  .contact-inputs {
+    flex-direction: column;
+  }
+
+  .contact-inputs div {
+    width: 100% !important;
+  }
+}
+
+@keyframes upAndDown {
+  0% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: 0.5rem;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
     opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
