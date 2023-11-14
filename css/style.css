@@ -154,7 +154,7 @@ textarea {
 
 .hexagon {
   width: 128px;
-  height: calc(128px * 1.1547);
+  height: 128px;
   position: relative;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
