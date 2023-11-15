@@ -143,6 +143,10 @@ textarea {
   bottom: 10px;
 }
 
+.hexagon-shadow img{
+	object-fit: cover;
+}
+
 .hexagon-shadow:hover {
   transform: scale(1.2);
   z-index: 1;
