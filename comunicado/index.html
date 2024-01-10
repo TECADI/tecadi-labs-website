@@ -36,6 +36,29 @@
         .footer a:hover {
             text-decoration: underline; /* Opcional: sublinha ao passar o mouse */
         }
+		.container h1 {
+            display: inline-block; /* Faz o h1 se comportar como um elemento inline */
+            margin: 0; /* Remove a margem padrão */
+            vertical-align: middle; /* Alinha verticalmente ao meio */
+        }
+        .container h1 span {
+            display: inline-block; /* Faz o span se comportar como um elemento inline */
+            font-size: 0.4em; /* Menor tamanho de fonte */
+            vertical-align: middle; /* Alinha verticalmente ao meio */
+            
+        }
+		table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th,td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
     </style>
 </head>
 <body>
@@ -45,14 +68,38 @@
         </div>
 
         <div class="content">
-            <h2>Migração de servidores</h2>
+            <center><h1>Migração de Servidores<BR><span>Última atualização deste documento - 10/01/2024 - 17:00</span></h1></center>
             <p>Prezados clientes e fornecedores,</p>
 			<p>Informamos que nossos servidores serão migrados de uma infraestrutura on premises para a nuvem. Esta mudança visa, principalmente, melhorar a performance e a segurança dos nossos serviços.</p>
 			<p><b>A mudança será realizada nos dias 10 de fevereiro - 2024. <BR>
 			A partir desta data, todas as novas integrações, FTP e interfaces deverão utilizar estes novos endereços e regras.</b></p>
 			<p>Nos tópicos a seguir, explicamos em detalhe cada mudança. Por favor, leia o documento por inteiro pois algumas mudanças são significativas e se referem a recursos que anteriormente não existiam, como por exemplo, restrição de entrada (IP's).</p>
 			<p>Em caso de dúvidas ou necessidade de testes conjuntos, utiliza a caixa de e-mail criada exclusivamente para suporte ao final do documento. O atendimento é exclusivo para setores de TI e desenvolvedores (apenas parte técnica)</p>
-            
+			
+			
+			<BR>
+			<h2>Cronograma</h2>
+			<p>O seguinte cronograma está previsto para todo o processo de migração:</p>
+			<table>
+				<tr>
+					<th>Data</th>
+					<th>Evento</th>
+				</tr>
+				<tr>
+					<td>09/02/2024 - 21:00 hrs</td>
+					<td>Cutover e paralisação de ambiente local. Cessam todos os tipos de integrações e comunicações.</td>
+				</tr>
+				<tr>
+					<td>09/02/2024 - 22:00 hrs</td>
+					<td>Início dos processos de migração para cloud</td>
+				</tr>
+				<tr>
+					<td><b>12/02/2024 - 08:00 hrs</b></td>
+					<td><b>Liberação do ambiente em cloud e resumo das operações normais e integrações</b></td>
+				</tr>
+			</table>
+			
+            <BR>
 			<h2>Restrição de conexões de entrada (firewall)</h2>
             <p>Com a alteração para o ambiente de nuvem pública, para melhoria da segurança cibernética de todos os envolvidos, estaremos implementando restrições de comunicação apenas com endereços IP previamente cadastrados.</p>
 			<p>Isso na prática tornará a conexão restrita apenas entre você e o TECADI.</p>
@@ -60,6 +107,7 @@
 			<p><b>Para este tópico, é necessário que sua equipe de infraestrutura de TI ou mantenedor de rede nos envie todos os endereços IP que irão conectar em nossos servidores, para que possamos cadastrá-los em nossas regras de liberação de firewall.</b></p>
 			<p>Estes endereços devem ser enviados no email ao final do documento, para fins de registro e serão vinculados ao seu cadastro de cliente/fornecedor no TECADI.</p>
 			
+			<BR>
             <h2>Alterações nas APIs de Webservice</h2>
             <p>Devido à migração, haverá mudanças em nossas APIs de webservice.</p>
 			<p>Todas as novas API REST serão oferecidas em um único endereço, que fará o proxy reverso para nossa estrutura, facilitando assim a sua configuração em um ponto único</p>
@@ -69,24 +117,32 @@
 			<p style="text-align: center;"><b> https://tecadilabs.tecadi.com.br:9000/rest/<span style="color: #FF0000;">suaempresa/enviar-pedido</span></b></p>
 
 			
-
-            <h2>Novos IPs servidores (liberações de firewall)</h2>
+			<BR>
+            <h2>Novos IPs/host servidores (liberações de firewall)</h2>
             <p>Abaixo segue a listagem de todos os IP's e nomes DNS que serão utilizados pelos servidores TECADI.</p>
 			<p><b>Sua equipe de TI deve liberar a comunicação para todos eles</b>, pois como estão em ambiente de nuvem, são utilizados como <i>load balance</i> ou podem iniciar conexões de retorno diferente da origem contatada</p>
 			<p>
+			189.126.154.159<BR>
 			189.126.138.206<BR>
 			189.126.138.207<BR>
 			189.126.138.208<BR>
 			189.126.138.209<BR>
 			189.126.138.210<BR>
-			
-			
-			
+			52.168.78.124<BR>
+			20.226.122.86<BR>
+			52.146.43.249<BR>
+			20.226.27.35<BR>
+			170.82.194.168 / 29 (range)<BR>
+			187.72.141.248 / 29 (range)<BR>
+			tecadiarmazens163322.protheus.cloudtotvs.com.br<BR>
+			tecadilabs.tecadi.com.br<BR>
+			*.tecadi.com.br<BR>
+			*.tecadilabs.com.br<BR>
 			</p>
 			
 			
 			
-			
+			<BR>
 			<h2>Dados de Acesso para FTP</h2>
 			<p>Nosso serviço de FTP está descontinuado. Apenas clientes existentes, que ainda utilizam este tipo de integração; e de forma a garantir compatibilidade com ambientes legados, continuarão a poder utilizá-la normalmente</p>
 			<BR>
