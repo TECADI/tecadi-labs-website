@@ -39,10 +39,17 @@ textarea {
 .background-home {
   height: 90vh;
   background: url("../assets/images/background.jpg") no-repeat center center;
-  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow-x: hidden;
+}
+
+.background-home-filter {
+  height: 90vh;
+  width: auto;
+  background: #1a64b8c0;
+  /* Cor preta com 50% de opacidade */
 }
 
 .button-view {
@@ -52,11 +59,9 @@ textarea {
   width: 100%;
   height: 50px;
   text-align: center;
-  background: linear-gradient(
-    125.56deg,
-    #105efb 26.72%,
-    rgba(25, 154, 251, 0.85) 91.96%
-  );
+  background: linear-gradient(125.56deg,
+      #105efb 26.72%,
+      rgba(25, 154, 251, 0.85) 91.96%);
   border: 0px;
   border-radius: 12px;
   font-family: "Comfortaa";
@@ -85,11 +90,9 @@ textarea {
 }
 
 .button-navbar:hover {
-  background: linear-gradient(
-    125.56deg,
-    #105efb 26.72%,
-    rgba(25, 154, 251, 0.85) 91.96%
-  );
+  background: linear-gradient(125.56deg,
+      #105efb 26.72%,
+      rgba(25, 154, 251, 0.85) 91.96%);
   color: #fafafa;
   border: 0px;
   transition: 0.5s;
@@ -143,8 +146,8 @@ textarea {
   bottom: 10px;
 }
 
-.hexagon-shadow img{
-	object-fit: cover;
+.hexagon-shadow img {
+  object-fit: cover;
 }
 
 .hexagon-shadow:hover {
@@ -266,6 +269,7 @@ textarea {
     bottom: 0;
     opacity: 0;
   }
+
   to {
     bottom: 30px;
     opacity: 1;
@@ -277,6 +281,7 @@ textarea {
     bottom: 30px;
     opacity: 1;
   }
+
   to {
     bottom: 0;
     opacity: 0;
