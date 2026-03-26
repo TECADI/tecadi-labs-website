@@ -20,10 +20,13 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+
+  <!-- Devicon - Technology Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body class="color-body-background">
-  <header class="container">
+  <header class="fixed-top">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand" href="#home">
@@ -41,10 +44,13 @@
               <a class="nav-link active" href="#home">Início</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#about">Sobre</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#products">Produtos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">Sobre</a>
+              <a class="nav-link" href="#services">Serviços</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contato</a>
@@ -67,14 +73,14 @@
 
   <section id="home" class="background-home">
     <div class="background-home-filter">
-      <div class="row">
+      <div class="row w-100">
         <div class="col">
-          <h1 class="text-center font-sansation-bold text-white p-5 mt-5">
+          <h1 class="hero-title text-center font-sansation-bold text-white p-5">
             Soluções inovadoras de TI para<br />
             Empresas
           </h1>
 
-          <p class="text-center text-white">
+          <p class="hero-subtitle text-center text-white">
             Um novo segmento da TECADI inteiramente focado<br />
             na inovação de processos operacionais e<br />
             logísticos
@@ -85,103 +91,14 @@
   </section>
 
   <main class="container-lg">
-    <section id="products" class="reveal">
+    <section id="about" class="section reveal">
       <div class="container">
-        <div class="row">
-          <h1 class="text-center font-sansation-bold color-primary-gradient p-5">
-            Produtos
-          </h1>
-
-          <p class="text-center ps-5 pe-5 text-break">
-            A qualidade do produto é fundamental para o sucesso de uma
-            empresa. Um produto de qualidade é aquele que atende às
-            expectativas e necessidades do cliente, é seguro e confiável, tem
-            durabilidade e performance satisfatórias, além de um bom
-            custo-benefício. Configura alguns de nossos produtos.
-          </p>
-        </div>
-
-        <div class="mt-5 d-flex flex-row justify-content-around flex-wrap flex-md-nowrap">
-          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-5 mb-4">
-            <img src="assets/images/animations/app-data-animate.svg" alt="Case 1" class="img-responsive"
-              style="width: 22rem" />
-          </div>
-
-          <div class="col-xs-8 col-sm-10 col-md-7 col-lg-5 mb-4">
-            <h2 class="color-primary-text border-bottom border-2 mb-3">
-              Coletor WMS
-            </h2>
-
-            <p>
-              Para atender às necessidades específicas de um operador
-              logístico com operações de cross docking, picking, recebimento e
-              expedição, a Tecadi Labs desenvolveu um coletor de dados próprio
-              que é perfeitamente adaptado às necessidades desse setor. Com
-              anos de experiência no desenvolvimento de software para
-              logística, a equipe da Tecadi Labs entende que a coleta de dados
-              precisa ser rápida, precisa e confiável para manter a eficiência
-              das operações logísticas. O coletor de dados da Tecadi Labs é
-              projetado para atender a essas necessidades, permitindo que os
-              usuários coletem dados de forma rápida e fácil, enquanto mantêm
-              a precisão e a confiabilidade dos dados coletados.
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-5 d-flex flex-row justify-content-around flex-wrap flex-md-nowrap">
-          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mb-4">
-            <h2 class="color-primary-text border-bottom border-2 mb-3">
-              Portal do Cliente
-            </h2>
-
-            <p>
-              O portal do cliente com visão gerencial dentro de um armazém de
-              operação WMS é uma das soluções inovadoras desenvolvidas pela
-              Tecadi Labs. Com anos de experiência no desenvolvimento de
-              software de logística, a Tecadi Labs está comprometida em
-              oferecer soluções tecnológicas avançadas para seus clientes,
-              ajudando-os a gerenciar e otimizar suas operações de armazenagem
-              e logística.
-            </p>
-          </div>
-
-          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-5 mb-4 ms-md-5">
-            <img src="assets/images/animations/data-extraction-animate.svg" alt="Case 1" class="img-responsive"
-              style="width: 22rem" />
-          </div>
-        </div>
-
-        <div class="mt-5 d-flex flex-row justify-content-around flex-wrap flex-md-nowrap">
-          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-5 mb-4">
-            <img src="assets/images/logi360.png" alt="Case 1" class="img-responsive" style="width: 20rem" />
-          </div>
-
-          <div class="col-xs-8 col-sm-10 col-md-7 col-lg-5 mb-4">
-            <h2 class="color-primary-text border-bottom border-2 mb-3">
-              LOGI360°
-            </h2>
-
-            <p>
-
-              O logi360 é uma abrangente suíte de soluções logísticas, projetada para atender às diversas necessidades
-              dos clientes. Composto por diversos módulos, oferece recursos como controle de agendamento, checklists e
-              uma variedade de outras ferramentas essenciais para otimização e gestão eficiente de operações logísticas.
-            </p>
-          </div>
-        </div>
-
-
-      </div>
-    </section>
-
-    <section id="about" class="border-top mt-5 reveal">
-      <div class="container">
-        <div class="row">
-          <h1 class="text-center font-sansation-bold color-primary-gradient p-5">
+        <div class="section-header">
+          <h1 class="section-title font-sansation-bold color-primary-gradient">
             Quem Somos
           </h1>
 
-          <p class="text-center ps-5 pe-5 text-break">
+          <p class="section-description">
             A Tecadi Labs é uma Logtech, que teve sua origem na TECADI
             Operador Logístico. Fundada por profissionais experientes em ambas
             as áreas, a empresa começou como um braço de tecnologia da TECADI,
@@ -197,7 +114,7 @@
           </div>
 
           <div class="col-xs-12 col-sm-12 col-md-7 col-lg-5 mb-4">
-            <h2 class="color-primary-text border-bottom border-2 mb-3">
+            <h2 class="product-title">
               Compromisso
             </h2>
 
@@ -217,17 +134,280 @@
           </h5>
         </div>
       </div>
-      <div class="mt-3 d-flex flex-column mr-[64px]" id="our-team"></div>
+      <div class="mt-3" id="our-team"></div>
     </section>
 
-    <section id="contact" class="border-top reveal">
+    <section id="products" class="section border-top reveal">
       <div class="container">
-        <div class="row">
-          <h1 class="text-center font-sansation-bold color-primary-gradient p-5">
+        <div class="section-header">
+          <h1 class="section-title font-sansation-bold color-primary-gradient">
+            Produtos
+          </h1>
+
+          <p class="section-description">
+            A qualidade do produto é fundamental para o sucesso de uma
+            empresa. Um produto de qualidade é aquele que atende às
+            expectativas e necessidades do cliente, é seguro e confiável, tem
+            durabilidade e performance satisfatórias, além de um bom
+            custo-benefício. Confira alguns de nossos produtos.
+          </p>
+        </div>
+
+        <!-- Fênix WMS -->
+        <div class="product-showcase">
+          <div class="product-showcase-image">
+            <img src="assets/images/fenix_blue.svg" class="floating" alt="Fênix WMS">
+          </div>
+
+          <div class="product-showcase-content">
+            <h2 class="product-title">Fênix WMS</h2>
+            <p>
+              O Fênix WMS é um sistema de gerenciamento de armazém completo, desenvolvido para otimizar todas as
+              operações logísticas do seu negócio. Com funcionalidades avançadas de controle de estoque, rastreamento
+              em tempo real e integração com outros sistemas, o Fênix WMS proporciona maior eficiência, redução de
+              erros e visibilidade total das operações de armazenagem.
+            </p>
+          </div>
+        </div>
+
+        <!-- Portal do Cliente -->
+        <div class="product-showcase reverse">
+          <div class="product-showcase-image">
+            <img src="assets/images/animations/data-extraction-animate.svg" alt="Portal do Cliente">
+          </div>
+
+          <div class="product-showcase-content">
+            <h2 class="product-title">Portal do Cliente</h2>
+            <p>
+              O portal do cliente com visão gerencial dentro de um armazém de
+              operação WMS é uma das soluções inovadoras desenvolvidas pela
+              Tecadi Labs. Com anos de experiência no desenvolvimento de
+              software de logística, a Tecadi Labs está comprometida em
+              oferecer soluções tecnológicas avançadas para seus clientes,
+              ajudando-os a gerenciar e otimizar suas operações de armazenagem
+              e logística.
+            </p>
+          </div>
+        </div>
+
+        <!-- LOGI360° -->
+        <div class="product-showcase">
+          <div class="product-showcase-image">
+            <img src="assets/images/logi360.png" class="floating" alt="LOGI360">
+          </div>
+
+          <div class="product-showcase-content">
+            <h2 class="product-title">LOGI360°</h2>
+            <p>
+              O logi360 é uma abrangente suíte de soluções logísticas, projetada para atender às diversas necessidades
+              dos clientes. Composto por diversos módulos, oferece recursos como controle de agendamento, checklists e
+              uma variedade de outras ferramentas essenciais para otimização e gestão eficiente de operações logísticas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Apps na Play Store -->
+        <div class="subsection-header">
+          <h3 class="subsection-title font-sansation-bold">
+            Nossos Apps
+          </h3>
+        </div>
+
+        <div class="apps-slider">
+          <div class="apps-slider-track">
+            <!-- Apps -->
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadilabs.meu_tecadi_app" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/pKuaBko7yssCSlWmEl0Em_RxGP1PEF5grqcQ_uVIEl04jyxjybC_xdjc-wYTya12lw=w240-h480-rw" alt="Meu Tecadi">
+              <span>Meu Tecadi</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.tecadi.capydesk" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/ujoijS6IhK_XrX_YKsWyJ4UgVDcaCPvdGz8dexgDBqYWH-ki3he-F61aD6nc5WkaEvOvKKdFNh2MZPoorR4jfw=w240-h480-rw" alt="CapyDesk">
+              <span>CapyDesk</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadilabs.fenix_wms" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/DU9amP5bo1UbAXjk-4_AMAzUAFVGJroXqdGgov3-vinIIMTuc0EYvpOCfduHbtc5evGokfJ3w1F20uzW_P9mMg=w240-h480-rw" alt="Fênix WMS">
+              <span>Fênix WMS</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadilabs.asset_management_app" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/WtP2OyPr5I_d21vYVaps03GPwoMn2I5vw3tFV9T-Au1eeZwI2fAN_J5Z2R3lRJjVNWw=w240-h480-rw" alt="G-Ativos">
+              <span>G-Ativos</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadilabs.yard_management_app" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/A5PoEwIbzbCEngcW6ZYqvSSZOOd95jlJGpelzmVbY5v24PD_IpWuaLpo0XyjfpKxKWI=w240-h480-rw" alt="Miracle YMS">
+              <span>Miracle YMS</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadilabs.checklist_app" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/mHJ6GBZ86T-FxBw_E_8djOhc1G4n7ULmFTbNcVB-m9OYketfaeGe2ioGBlzLLitspKE=s256-rw" alt="CheckList">
+              <span>CheckList</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadi.cadastro_wms" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/LRbaC1XJXuvsG8zLeZs1TSV3yNx2uMeR7RvSQwUt0ORMbEIGwoGtGaE0Cl0zesnIJQ=s256-rw" alt="Cadastro WMS">
+              <span>Cadastro WMS</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.tecadi.coletoroperacional" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/jlii5t4PwYYh7cXdeZ7MLwcDO1eRAJUTj7IlQDPWZgqzGPl79DXtfuKm-hJTRXJgHw=s256-rw" alt="Miracle WMS">
+              <span>Miracle WMS</span>
+            </a>
+            <!-- Duplicados para loop infinito -->
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadilabs.meu_tecadi_app" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/pKuaBko7yssCSlWmEl0Em_RxGP1PEF5grqcQ_uVIEl04jyxjybC_xdjc-wYTya12lw=w240-h480-rw" alt="Meu Tecadi">
+              <span>Meu Tecadi</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.tecadi.capydesk" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/ujoijS6IhK_XrX_YKsWyJ4UgVDcaCPvdGz8dexgDBqYWH-ki3he-F61aD6nc5WkaEvOvKKdFNh2MZPoorR4jfw=w240-h480-rw" alt="CapyDesk">
+              <span>CapyDesk</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadilabs.fenix_wms" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/DU9amP5bo1UbAXjk-4_AMAzUAFVGJroXqdGgov3-vinIIMTuc0EYvpOCfduHbtc5evGokfJ3w1F20uzW_P9mMg=w240-h480-rw" alt="Fênix WMS">
+              <span>Fênix WMS</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadilabs.asset_management_app" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/WtP2OyPr5I_d21vYVaps03GPwoMn2I5vw3tFV9T-Au1eeZwI2fAN_J5Z2R3lRJjVNWw=w240-h480-rw" alt="G-Ativos">
+              <span>G-Ativos</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadilabs.yard_management_app" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/A5PoEwIbzbCEngcW6ZYqvSSZOOd95jlJGpelzmVbY5v24PD_IpWuaLpo0XyjfpKxKWI=w240-h480-rw" alt="Miracle YMS">
+              <span>Miracle YMS</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadilabs.checklist_app" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/mHJ6GBZ86T-FxBw_E_8djOhc1G4n7ULmFTbNcVB-m9OYketfaeGe2ioGBlzLLitspKE=s256-rw" alt="CheckList">
+              <span>CheckList</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.tecadi.cadastro_wms" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/LRbaC1XJXuvsG8zLeZs1TSV3yNx2uMeR7RvSQwUt0ORMbEIGwoGtGaE0Cl0zesnIJQ=s256-rw" alt="Cadastro WMS">
+              <span>Cadastro WMS</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.tecadi.coletoroperacional" target="_blank" class="app-card">
+              <img src="https://play-lh.googleusercontent.com/jlii5t4PwYYh7cXdeZ7MLwcDO1eRAJUTj7IlQDPWZgqzGPl79DXtfuKm-hJTRXJgHw=s256-rw" alt="Miracle WMS">
+              <span>Miracle WMS</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="services" class="section border-top reveal">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title font-sansation-bold color-primary-gradient">
+            Serviços
+          </h1>
+          <p class="section-description">
+            Oferecemos soluções completas para impulsionar a transformação digital do seu negócio.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>Software sob medida</h3>
+            <p>Criamos soluções personalizadas para atender às necessidades específicas do seu negócio.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3>Integração de Sistemas</h3>
+            <p>Conectamos diferentes plataformas para criar um ecossistema integrado e eficiente.</p>
+          </div>
+        </div>
+
+        <!-- Contadores -->
+        <div class="counter-section counter-section-small" id="fenix-counter">
+          <div class="counter-item">
+            <span class="counter-number" id="lines-counter">0</span>
+            <span class="counter-label">Linhas de Códigos</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-number"><span id="hours-counter">0</span><span class="counter-unit">hrs</span></span>
+            <span class="counter-label">Horas de Projetos</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-number"><span id="years-counter">0</span><span class="counter-unit">anos</span></span>
+            <span class="counter-label">Anos de Experiência</span>
+          </div>
+        </div>
+
+        <div class="subsection-header">
+          <h3 class="subsection-title font-sansation-bold">
+            Tecnologias que utilizamos
+          </h3>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="tech-card">
+            <i class="devicon-typescript-plain colored"></i>
+            <span>TypeScript</span>
+          </div>
+          <div class="tech-card">
+            <i class="devicon-nestjs-original colored"></i>
+            <span>NestJS</span>
+          </div>
+          <div class="tech-card">
+            <i class="devicon-nodejs-plain colored"></i>
+            <span>Node.js</span>
+          </div>
+          <div class="tech-card">
+            <i class="devicon-nextjs-plain"></i>
+            <span>Next.js</span>
+          </div>
+          <div class="tech-card">
+            <i class="devicon-react-original colored"></i>
+            <span>React</span>
+          </div>
+          <div class="tech-card">
+            <i class="devicon-flutter-plain colored"></i>
+            <span>Flutter</span>
+          </div>
+          <div class="tech-card">
+            <i class="devicon-kotlin-plain colored"></i>
+            <span>Kotlin</span>
+          </div>
+          <div class="tech-card">
+            <i class="devicon-android-plain colored"></i>
+            <span>Android</span>
+          </div>
+          <div class="tech-card">
+            <i class="devicon-apple-original"></i>
+            <span>iOS</span>
+          </div>
+          <div class="tech-card">
+            <i class="devicon-angularjs-plain colored"></i>
+            <span>Angular</span>
+          </div>
+          <div class="tech-card">
+            <i class="devicon-python-plain colored"></i>
+            <span>Python</span>
+          </div>
+          <div class="tech-card">
+            <img src="https://github.com/totvs/tlpp-samples/raw/master/logo-totvs.png" alt="TLPP" class="tech-icon-img">
+            <span>TLPP</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section border-top reveal">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title font-sansation-bold color-primary-gradient">
             Contato
           </h1>
 
-          <p class="text-center ps-5 pe-5 text-break">
+          <p class="section-description">
             Se interessou pelos nossos serviços?
           </p>
         </div>
@@ -239,7 +419,7 @@
           </div>
 
           <div class="mobile-center col-xs-12 col-sm-12 col-md-7 col-lg-5 mb-5">
-            <h2 class="color-primary-text border-bottom border-2 mb-3">
+            <h2 class="product-title">
               Solicite um Serviço
             </h2>
 
@@ -283,7 +463,7 @@
 
         <div class="mt-5 d-flex flex-row justify-content-around flex-wrap flex-md-nowrap">
           <div class="mobile-center col-xs-12 col-sm-12 col-md-7 col-lg-5 mb-5">
-            <h2 class="color-primary-text border-bottom border-2 mb-3">
+            <h2 class="product-title">
               Trabalhe conosco
             </h2>
 
@@ -352,6 +532,30 @@
   </a>
 
   <div id="toast"></div>
+
+  <!-- Modal Figurinha -->
+  <div id="player-modal" class="player-modal" onclick="closePlayerModal(event)">
+    <div class="sticker-card" onclick="event.stopPropagation()">
+      <div class="sticker-header">
+        <span class="sticker-brand">TECADI LABS</span>
+        <span class="sticker-year">2026</span>
+      </div>
+      <div class="sticker-photo">
+        <img id="modal-avatar" src="" alt="">
+      </div>
+      <div class="sticker-info">
+        <span class="sticker-number" id="modal-number">00</span>
+        <h3 class="sticker-name" id="modal-name">Nome</h3>
+        <p class="sticker-role" id="modal-role">Cargo</p>
+      </div>
+      <div class="sticker-footer">
+        <div class="sticker-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/200px-Flag_of_Brazil.svg.png" alt="Brasil">
+        </div>
+      </div>
+      <button class="sticker-close" onclick="closePlayerModal(event)">&times;</button>
+    </div>
+  </div>
 
   <script>
     function sendContactMail(e) {
@@ -448,140 +652,103 @@
     }
 
     const employees = [
-      { name: "Lois", avatar: "./assets/images/team/luiz.png" },
-      { name: "KuwabaraX69", avatar: "./assets/images/team/kalebe.jpeg" },
-      { name: "risesmj", avatar: "./assets/images/team/mj.jfif" },
-      { name: "BigoJohn", avatar: "./assets/images/team/john.png" },
-      { name: "Marquinhôo oo oo", avatar: "./assets/images/team/marco.jpg" },
-      { name: "Pablito", avatar: "./assets/images/team/pablo.jpg" },
-	  { name: "Miojo", avatar: "./assets/images/team/lamim.png" },
-	  { name: "Romano", avatar: "./assets/images/team/romano.jfif" },
-	  { name: "DHCP", avatar: "./assets/images/team/leticia.jfif" },
-	  { name: "Hélios", avatar: "./assets/images/team/helio.jfif" },
-	  { name: "Novato", avatar: "./assets/images/team/jose.jfif" },
-	{ name: "Alex", avatar: "./assets/images/team/alex.png" },
-	{ name: "Henrique", avatar: "./assets/images/team/henrique.png" },
-	{ name: "Diego", avatar: "./assets/images/team/diego.jfif" },
-	{ name: "Artur", avatar: "./assets/images/team/artur.png" },
-	{ name: "Keller", avatar: "./assets/images/team/keller.jfif" },
-	{ name: "Barbie", avatar: "./assets/images/team/barbie.jfif" },
-	{ name: "Vicente", avatar: "./assets/images/team/vicente.jfif" },
-	{ name: "Ruan", avatar: "./assets/images/team/ruan.png" },
-	{ name: "Alef", avatar: "./assets/images/team/alef.png" },
-	{ name: "Evandro", avatar: "./assets/images/team/evandro.png" },
+      { name: "Luiz", role: "Gerente", avatar: "./assets/images/team/luiz.png" },
+      { name: "Kalebe", role: "Suporte", avatar: "./assets/images/team/kalebe.jpeg" },
+      { name: "Matheus", role: "Desenvolvedor", avatar: "./assets/images/team/mj.jfif" },
+      { name: "Joao Souza", role: "Desenvolvedor", avatar: "./assets/images/team/john.png" },
+      { name: "Marco", role: "Suporte", avatar: "./assets/images/team/marco.jpg" },
+      { name: "Pablo Nunes", role: "Desenvolvedor", avatar: "./assets/images/team/pablo.jpg" },
+      { name: "Lucas Lamim", role: "Desenvolvedor", avatar: "./assets/images/team/lamim.png" },
+      { name: "Daniel Romano", role: "Suporte", avatar: "./assets/images/team/romano.jfif" },
+      { name: "Letícia", role: "Suporte", avatar: "./assets/images/team/leticia.jfif" },
+      { name: "Hélio", role: "Projetos", avatar: "./assets/images/team/helio.jfif" },
+      { name: "José Nonato", role: "Analista de Dados", avatar: "./assets/images/team/jose.jfif" },
+      { name: "Henrique Luis", role: "Desenvolvedor", avatar: "./assets/images/team/henrique.png" },
+      { name: "Diego Andrade", role: "Desenvolvedor", avatar: "./assets/images/team/diego.jfif" },
+      { name: "Artur", role: "Suporte", avatar: "./assets/images/team/artur.png" },
+      { name: "Gabriel Keller", role: "Desenvolvedor", avatar: "./assets/images/team/keller.jfif" },
+      { name: "Bárbara Felix", role: "Gerente", avatar: "./assets/images/team/barbie.jfif" },
+      { name: "Vicente", role: "Suporte", avatar: "./assets/images/team/vicente.jfif" },
+      { name: "Ruan", role: "Suporte", avatar: "./assets/images/team/ruan.png" },
+      { name: "Alef", role: "Suporte", avatar: "./assets/images/team/alef.png" },
+      { name: "Evandro", role: "Especialista de Infra", avatar: "./assets/images/team/evandro.png" },
     ];
 
     const ourTeamContainer = document.getElementById("our-team");
+    ourTeamContainer.classList.add("soccer-field");
 
-    const windowWidth = window.innerWidth;
+    // Formação tática: 1-4-5-5-5 (20 jogadores)
+    const formation = [
+      { line: "goalkeeper", count: 1 },
+      { line: "defense", count: 4 },
+      { line: "midfield", count: 5 },
+      { line: "midfield-attack", count: 5 },
+      { line: "attack", count: 5 }
+    ];
 
-    if (windowWidth < 720) {
-      const totalRows = Math.ceil(employees.length / 2);
+    let playerIndex = 0;
 
-      for (
-        let counter = 0;
-        counter < Math.ceil(employees.length / 2);
-        counter++
-      ) {
-        const hexagonRow = document.createElement("div");
-        if (counter % 2 === 0) {
-          hexagonRow.classList.add("hexagon-row");
-          hexagonRow.classList.add("hexagon-row-even");
-        } else {
-          hexagonRow.classList.add("hexagon-row");
-          hexagonRow.classList.add("hexagon-row-odd");
-        }
-
-        employees
-          .slice(counter * 2, (counter + 1) * 2)
-          .forEach((employee, index) => {
-            const hexagonShadow = document.createElement("div");
-            hexagonShadow.classList.add("hexagon-shadow");
-
-            const hexagon = document.createElement("img");
-            hexagon.classList.add("hexagon");
-            hexagon.alt = employee.name;
-            hexagon.src = employee.avatar;
-
-            const employeeName = document.createElement("p");
-            employeeName.innerText = employee.name;
-
-            hexagonShadow.appendChild(employeeName);
-
-            hexagonShadow.appendChild(hexagon);
-
-            hexagonRow.appendChild(hexagonShadow);
-          });
-
-        if (counter === totalRows - 1) {
-          if (
-            employees.slice(counter * 2, (counter + 1) * 2).length === 1 ||
-            employees.slice(counter * 2, (counter + 1) * 2).length === 3
-          ) {
-            if (totalRows % 2 === 0) {
-              hexagonRow.style.marginLeft = "-68px";
-            } else {
-              hexagonRow.style.marginLeft = "-202px";
-            }
-          }
-        }
-
-        ourTeamContainer.appendChild(hexagonRow);
-      }
-    } else {
-      const totalRows = Math.ceil(employees.length / 4);
-
-      for (
-        let counter = 0;
-        counter < Math.ceil(employees.length / 4);
-        counter++
-      ) {
-        const hexagonRow = document.createElement("div");
-        if (counter % 2 === 0) {
-          hexagonRow.classList.add("hexagon-row");
-          hexagonRow.classList.add("hexagon-row-even");
-        } else {
-          hexagonRow.classList.add("hexagon-row");
-          hexagonRow.classList.add("hexagon-row-odd");
-        }
-
-        employees
-          .slice(counter * 4, (counter + 1) * 4)
-          .forEach((employee, index) => {
-            const hexagonShadow = document.createElement("div");
-            hexagonShadow.classList.add("hexagon-shadow");
-
-            const hexagon = document.createElement("img");
-            hexagon.classList.add("hexagon");
-            hexagon.alt = employee.name;
-            hexagon.src = employee.avatar;
-
-            const employeeName = document.createElement("p");
-            employeeName.innerText = employee.name;
-
-            hexagonShadow.appendChild(employeeName);
-
-            hexagonShadow.appendChild(hexagon);
-
-            hexagonRow.appendChild(hexagonShadow);
-
-            if (counter === totalRows - 1) {
-              if (
-                employees.slice(counter * 4, (counter + 1) * 4).length ===
-                1 ||
-                employees.slice(counter * 4, (counter + 1) * 4).length === 3
-              ) {
-                if (totalRows % 2 === 0) {
-                  hexagonRow.style.marginLeft = "-68px";
-                } else {
-                  hexagonRow.style.marginLeft = "-202px";
-                }
-              }
-            }
-          });
-        ourTeamContainer.appendChild(hexagonRow);
-      }
+    // Função para abrir modal
+    function openPlayerModal(employee, index) {
+      const modal = document.getElementById("player-modal");
+      document.getElementById("modal-avatar").src = employee.avatar;
+      document.getElementById("modal-name").innerText = employee.name;
+      document.getElementById("modal-role").innerText = employee.role;
+      document.getElementById("modal-number").innerText = String(index + 1).padStart(2, '0');
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
     }
+
+    // Função para fechar modal
+    window.closePlayerModal = function(event) {
+      const modal = document.getElementById("player-modal");
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
+    // Fechar modal com ESC
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        closePlayerModal();
+      }
+    });
+
+    formation.forEach((lineConfig) => {
+      const line = document.createElement("div");
+      line.classList.add("field-line", lineConfig.line);
+
+      for (let i = 0; i < lineConfig.count && playerIndex < employees.length; i++) {
+        const employee = employees[playerIndex];
+        const currentIndex = playerIndex;
+
+        const player = document.createElement("div");
+        player.classList.add("player");
+        player.onclick = () => openPlayerModal(employee, currentIndex);
+
+        const avatar = document.createElement("img");
+        avatar.classList.add("player-avatar");
+        avatar.src = employee.avatar;
+        avatar.alt = employee.name;
+        avatar.loading = "lazy";
+
+        const name = document.createElement("span");
+        name.classList.add("player-name");
+        name.innerText = employee.name;
+
+        const role = document.createElement("span");
+        role.classList.add("player-role");
+        role.innerText = employee.role;
+
+        player.appendChild(avatar);
+        player.appendChild(name);
+        player.appendChild(role);
+        line.appendChild(player);
+
+        playerIndex++;
+      }
+
+      ourTeamContainer.appendChild(line);
+    });
 
     const handlePhone = (event) => {
       let input = event.target;
@@ -598,7 +765,9 @@
 
     function reveal() {
       const toTop = document.getElementById("to-top");
+      const navbar = document.querySelector(".navbar");
 
+      // Back to top button visibility
       if (window.scrollY > 20) {
         toTop.style.opacity = 1;
         toTop.style.userSelect = "all";
@@ -609,6 +778,14 @@
         toTop.style.cursor = "default";
       }
 
+      // Navbar scroll effect
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+
+      // Reveal animations
       var reveals = document.querySelectorAll(".reveal");
 
       for (var i = 0; i < reveals.length; i++) {
@@ -625,6 +802,74 @@
     }
 
     window.addEventListener("scroll", reveal);
+
+    // Initial call to set proper state on page load
+    reveal();
+
+    // Counter animation for Services section
+    let counterAnimated = false;
+    let wasVisible = false;
+    const linesCounter = document.getElementById("lines-counter");
+    const hoursCounter = document.getElementById("hours-counter");
+    const yearsCounter = document.getElementById("years-counter");
+    const counterBox = document.getElementById("fenix-counter");
+
+    function animateCounter() {
+      const rect = counterBox.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+      // Reset quando sair da viewport
+      if (!isVisible && wasVisible) {
+        counterAnimated = false;
+        linesCounter.textContent = "0";
+        hoursCounter.textContent = "0";
+        yearsCounter.textContent = "0";
+      }
+
+      wasVisible = isVisible;
+
+      if (counterAnimated) return;
+
+      if (isVisible) {
+        counterAnimated = true;
+        const duration = 2000;
+        const startTime = performance.now();
+
+        function updateCounters(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+
+          // Linhas de código
+          const linesTarget = 99999;
+          const linesCurrent = Math.floor(easeOut * linesTarget);
+          linesCounter.textContent = linesCurrent.toLocaleString('pt-BR');
+
+          // Horas de projetos
+          const hoursTarget = 60000;
+          const hoursCurrent = Math.floor(easeOut * hoursTarget);
+          hoursCounter.textContent = hoursCurrent.toLocaleString('pt-BR');
+
+          // Anos de experiência
+          const yearsTarget = 10;
+          const yearsCurrent = Math.floor(easeOut * yearsTarget);
+          yearsCounter.textContent = yearsCurrent;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounters);
+          } else {
+            linesCounter.textContent = "99.999+";
+            hoursCounter.textContent = "60.000+";
+            yearsCounter.textContent = "10+";
+          }
+        }
+
+        requestAnimationFrame(updateCounters);
+      }
+    }
+
+    window.addEventListener("scroll", animateCounter);
+    animateCounter();
   </script>
 
   <!-- Bootstrap JavaScript Libraries -->

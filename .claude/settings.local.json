@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "WebFetch(domain:devicon.dev)",
+      "WebFetch(domain:play.google.com)",
+      "WebSearch"
+    ]
+  }
+}
