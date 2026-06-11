@@ -658,7 +658,6 @@
       { name: "Joao Souza", role: "Desenvolvedor", avatar: "./assets/images/team/john.png" },
       { name: "Marco", role: "Suporte", avatar: "./assets/images/team/marco.jpg" },
       { name: "Pablo Nunes", role: "Desenvolvedor", avatar: "./assets/images/team/pablo.jpg" },
-      { name: "Lucas Lamim", role: "Desenvolvedor", avatar: "./assets/images/team/lamim.png" },
       { name: "Daniel Romano", role: "Suporte", avatar: "./assets/images/team/romano.jfif" },
       { name: "Letícia", role: "Suporte", avatar: "./assets/images/team/leticia.jfif" },
       { name: "Hélio", role: "Projetos", avatar: "./assets/images/team/helio.jfif" },
@@ -666,7 +665,6 @@
       { name: "Henrique Luis", role: "Desenvolvedor", avatar: "./assets/images/team/henrique.png" },
       { name: "Diego Andrade", role: "Desenvolvedor", avatar: "./assets/images/team/diego.jfif" },
       { name: "Artur", role: "Suporte", avatar: "./assets/images/team/artur.png" },
-      { name: "Gabriel Keller", role: "Desenvolvedor", avatar: "./assets/images/team/keller.jfif" },
       { name: "Bárbara Felix", role: "Gerente", avatar: "./assets/images/team/barbie.jfif" },
       { name: "Vicente", role: "Suporte", avatar: "./assets/images/team/vicente.jfif" },
       { name: "Ruan", role: "Suporte", avatar: "./assets/images/team/ruan.png" },
@@ -677,13 +675,13 @@
     const ourTeamContainer = document.getElementById("our-team");
     ourTeamContainer.classList.add("soccer-field");
 
-    // Formação tática: 1-4-5-5-5 (20 jogadores)
+    // Formação tática: 1-4-5-4-4 (18 jogadores)
     const formation = [
       { line: "goalkeeper", count: 1 },
       { line: "defense", count: 4 },
       { line: "midfield", count: 5 },
-      { line: "midfield-attack", count: 5 },
-      { line: "attack", count: 5 }
+      { line: "midfield-attack", count: 4 },
+      { line: "attack", count: 4 }
     ];
 
     let playerIndex = 0;
