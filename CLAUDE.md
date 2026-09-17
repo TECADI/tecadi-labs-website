@@ -28,7 +28,20 @@ assets/
   images/           # Imagens do site incluindo team/
   icons/            # SVGs de ícones e logos
 comunicado/         # Página de comunicado de migração de servidor
+docs/
+  api-standard/     # Documentação da API Standard TECADI (rota /docs/api-standard/)
+.nojekyll           # Desativa o Jekyll — o GitHub Pages serve os arquivos como estão
 ```
+
+### Documentação da API (`docs/api-standard/`)
+
+Página independente da landing page, com layout próprio (`docs.css`) que
+reaproveita os design tokens de `css/colors.css` e `css/fonts.css`.
+
+O conteúdo vem dos Markdown em `docs/api-standard/content/`, interpretados em
+runtime por `docs.js` — atualizar a documentação é editar o `.md`, sem build.
+Rotas novas se registram em `content/manifest.json`. Detalhes em
+`docs/api-standard/README.md`.
 
 ### Sistema de Design (CSS Variables)
 
