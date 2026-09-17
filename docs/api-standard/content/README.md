@@ -49,8 +49,8 @@ Fonte: `Controllers/delivery_standard_controller.tlpp`
 
 | Rota | Documento | Finalidade |
 | --- | --- | --- |
-| `POST standard/v1/delivery` | [criar-remessa.md](delivery/post-standard-v1-delivery.md) | Cria uma remessa de entrada via JSON |
-| `POST standard/v1/delivery/file` | [criar-remessa-por-arquivo.md](delivery/post-standard-v1-delivery-file.md) | Cria uma remessa a partir de um CSV em base64 |
+| `POST v1/delivery` | [criar-remessa.md](delivery/post-standard-v1-delivery.md) | Cria uma remessa de entrada via JSON |
+| `POST v1/delivery/file` | [criar-remessa-por-arquivo.md](delivery/post-standard-v1-delivery-file.md) | Cria uma remessa a partir de um CSV em base64 |
 
 ### Notas fiscais — `invoice/`
 
@@ -85,7 +85,7 @@ Fonte: `Controllers/stock_snapshot_standard_controller.tlpp`
 
 | Rota | Documento | Finalidade |
 | --- | --- | --- |
-| `GET standard/v1/stock-snapshot` | [consultar-foto-do-estoque.md](stock-snapshot/get-standard-v1-stock-snapshot.md) | Saldo livre, empenhado e total com análise de divergências |
+| `GET v1/stock-snapshot` | [consultar-foto-do-estoque.md](stock-snapshot/get-standard-v1-stock-snapshot.md) | Saldo livre, empenhado e total com análise de divergências |
 
 ---
 
