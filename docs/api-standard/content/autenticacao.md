@@ -87,10 +87,18 @@ Host: {domain}
 
 ### Valores de `tenantId` por filial
 
+A empresa é sempre `01`; o que muda é a filial:
+
 | Filial | `tenantId` |
 | --- | --- |
-| **ITAJAÍ** | `01,103` |
-| **NAVEGANTES** | `01,117` |
+| **Itajaí 1** | `01,103` |
+| **Itajaí 2** | `01,107` |
+| **Navegantes 1** | `01,108` |
+| **Navegantes 2** | `01,117` |
+| **Curitiba** | `01,105` |
+| **FRG** | `01,115` |
+
+O número da filial é o que aparece nas mensagens de erro: em `Cliente sem acesso ao uso de webservices Tecadi da filial 103`, o `103` corresponde a Itajaí 1.
 
 > ⚠️ O `tenantId` precisa corresponder à filial onde o dado consultado ou enviado existe. Enviar a filial errada faz a requisição falhar por falta de acesso, mesmo que o token esteja correto.
 

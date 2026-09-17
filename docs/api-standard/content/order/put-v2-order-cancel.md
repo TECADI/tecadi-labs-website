@@ -16,103 +16,21 @@ Permite ao cliente solicitar o cancelamento de um pedido previamente enviado pel
 | **Content-Type** | `application/json` |
 | **Charset da resposta** | `iso-8859-1` |
 
-> O `{domain}` varia por ambiente e é informado pela TECADI no momento da liberação do acesso.
+## 2. Autenticação e cabeçalhos
 
----
-
-## 2. Autenticação
-
-A autenticação é o **primeiro passo** da integração com a TECADI e segue o padrão **OAuth 2.0**, no fluxo *Resource Owner Password Credentials* (`grant_type=password`). O resultado é um **Bearer Token (JWT)**, usado em todas as demais rotas — inclusive nesta de cancelamento.
-
-### 2.1 Endpoint de emissão do token
-
-| | |
-| --- | --- |
-| **Método** | `POST` |
-| **Endpoint** | `/rest/api/oauth2/v1/token` |
-| **URL completa** | `https://{domain}/rest/api/oauth2/v1/token` |
-
-Os parâmetros são enviados como **query params**:
-
-| Parâmetro | Tipo | Obrigatório | Descrição |
-| --- | --- | --- | --- |
-| `grant_type` | String | Sim | Valor fixo `password` |
-| `username` | String | Sim | Nome de usuário fornecido pela TECADI |
-| `password` | String | Sim | Senha do usuário fornecida pela TECADI |
-
-### 2.2 Exemplo de requisição
-
-**cURL**
-
-```bash
-curl -X POST "https://{domain}/rest/api/oauth2/v1/token?grant_type=password&username=SEU_USUARIO&password=SUA_SENHA"
-```
-
-**HTTP puro**
-
-```http
-POST /rest/api/oauth2/v1/token?grant_type=password&username=SEU_USUARIO&password=SUA_SENHA HTTP/1.1
-Host: {domain}
-```
-
-### 2.3 Resposta de sucesso
-
-**HTTP 200 OK**
-
-```json
-{
-  "access_token": "*** token ***",
-  "refresh_token": "*** token ***",
-  "scope": "default",
-  "token_type": "Bearer",
-  "expires_in": 3600,
-  "hasMFA": false
-}
-```
-
-| Campo | Descrição |
-| --- | --- |
-| `access_token` | Token JWT a ser enviado nas demais rotas |
-| `refresh_token` | Token para renovação do acesso |
-| `scope` | Escopo concedido |
-| `token_type` | Tipo do token — sempre `Bearer` |
-| `expires_in` | Validade do token em segundos (`3600` = 1 hora) |
-| `hasMFA` | Indica se o usuário possui autenticação multifator |
-
-### 2.4 Resposta de erro
-
-**HTTP 401**
-
-```json
-{
-  "code": 401,
-  "message": "invalid_grant Falha de autentição para o usuário 123456.",
-  "detailedMessage": "invalid_grant Falha de autenticação para o usuário 123456."
-}
-```
-
----
-
-## 3. Cabeçalhos da requisição
+Bearer Token (OAuth 2.0) — ver [Autenticação](../autenticacao.md).
 
 | Cabeçalho | Obrigatório | Descrição |
 | --- | --- | --- |
-| `Authorization` | Sim | `Bearer <access_token>` — token obtido na seção 2 |
+| `Authorization` | Sim | `Bearer <access_token>` |
 | `Content-Type` | Sim | `application/json` |
-| `tenantId` | Sim | Empresa e filial de destino, no formato `<empresa>,<filial>` (ver tabela abaixo) |
+| `tenantId` | Sim | Empresa e filial de destino — ver [Autenticação](../autenticacao.md) |
 
-### Valores de `tenantId` por filial
-
-| Filial | `tenantId` |
-| --- | --- |
-| **ITAJAÍ** | `01,103` |
-| **NAVEGANTES** | `01,117` |
-
-> ⚠️ O `tenantId` precisa corresponder à filial em que o pedido foi criado. Enviar a filial errada faz a requisição retornar erro `001` (cliente sem acesso ao webservice naquela filial), mesmo que o token esteja correto e o pedido exista na outra filial.
+> ⚠️ O `tenantId` precisa corresponder à filial em que o pedido foi criado. Enviar a filial errada faz a requisição retornar erro `001` (cliente sem acesso ao webservice naquela filial), mesmo que o token esteja correto e o pedido exista em outra filial.
 
 ---
 
-## 4. Corpo da requisição
+## 3. Corpo da requisição
 
 ```json
 {
@@ -134,7 +52,7 @@ Observações:
 
 ---
 
-## 5. Exemplo de requisição
+## 4. Exemplo de requisição
 
 **cURL**
 
@@ -166,7 +84,7 @@ tenantId: 01,103
 
 ---
 
-## 6. Resposta de sucesso
+## 5. Resposta de sucesso
 
 **HTTP 200 OK**
 
@@ -188,7 +106,7 @@ O retorno `200` confirma que **a solicitação de cancelamento foi aceita e regi
 
 ---
 
-## 7. Respostas de erro
+## 6. Respostas de erro
 
 Todos os erros retornam **HTTP 400** com a mesma estrutura:
 
@@ -202,7 +120,7 @@ Todos os erros retornam **HTTP 400** com a mesma estrutura:
 
 O campo `details` só é preenchido quando há mais de uma informação a detalhar (ex.: lista de campos faltantes); nos demais casos vem vazio.
 
-### 7.1 Campo obrigatório ausente
+### 6.1 Campo obrigatório ausente
 
 **HTTP 400** — `reason` não enviado:
 
@@ -229,7 +147,7 @@ Com os dois campos faltando:
 }
 ```
 
-### 7.2 Pedido não encontrado
+### 6.2 Pedido não encontrado
 
 **HTTP 400** — o número informado não existe para este cliente nesta filial:
 
@@ -243,7 +161,7 @@ Com os dois campos faltando:
 
 Verifique o número do pedido e, principalmente, se o `tenantId` corresponde à filial em que ele foi criado.
 
-### 7.3 Pedido já cancelado
+### 6.3 Pedido já cancelado
 
 **HTTP 400** — o pedido já foi cancelado ou já está com cancelamento pendente:
 
@@ -257,7 +175,7 @@ Verifique o número do pedido e, principalmente, se o `tenantId` corresponde à 
 
 > Esta rota **não é idempotente** por decisão de projeto: reenviar o cancelamento de um pedido já cancelado retorna erro, e não sucesso. Isso é intencional, para que a integração perceba que nada foi feito nesta chamada. Trate este caso como "já estava cancelado", não como falha operacional.
 
-### 7.4 Pedido já faturado
+### 6.4 Pedido já faturado
 
 **HTTP 400** — já existe nota fiscal emitida para o pedido:
 
@@ -271,7 +189,7 @@ Verifique o número do pedido e, principalmente, se o `tenantId` corresponde à 
 
 Neste ponto o cancelamento não é mais possível pela API. É necessário tratar como devolução, acionando o time comercial da TECADI.
 
-### 7.5 Cliente sem acesso à filial
+### 6.5 Cliente sem acesso à filial
 
 **HTTP 400** — token válido, mas sem contrato ativo de webservice na filial informada no `tenantId`:
 
@@ -283,13 +201,13 @@ Neste ponto o cancelamento não é mais possível pela API. É necessário trata
 }
 ```
 
-### 7.6 Demais falhas de cancelamento
+### 6.6 Demais falhas de cancelamento
 
 **HTTP 400** — qualquer outra regra que impeça o cancelamento devolve `typeError` `005` com a mensagem específica no campo `message`.
 
 ---
 
-## 8. Tabela de códigos de erro (`typeError`)
+## 7. Tabela de códigos de erro (`typeError`)
 
 | Código | Significado | Ação recomendada |
 | --- | --- | --- |

@@ -8,12 +8,24 @@ Cada **controller** tem sua própria pasta, e cada **rota** tem seu próprio doc
 
 ## Comece por aqui
 
-**[Autenticação](autenticacao.md)** — OAuth 2.0, obtenção do Bearer Token, cabeçalhos comuns e valores de `tenantId` por filial. Todas as rotas dependem deste documento.
+**[Autenticação](autenticacao.md)** — OAuth 2.0, obtenção do Bearer Token e cabeçalhos comuns. Todas as rotas dependem deste documento.
+
+### Filiais e `tenantId`
+
+O cabeçalho `tenantId` é **obrigatório em todas as rotas** e define a empresa e a filial de destino, no formato `<empresa>,<filial>`. A empresa é sempre `01`; o que muda é a filial:
 
 | Filial | `tenantId` |
 | --- | --- |
-| ITAJAÍ | `01,103` |
-| NAVEGANTES | `01,117` |
+| Itajaí 1 | `01,103` |
+| Itajaí 2 | `01,107` |
+| Navegantes 1 | `01,108` |
+| Navegantes 2 | `01,117` |
+| Curitiba | `01,105` |
+| FRG | `01,115` |
+
+O número que aparece nas mensagens de erro é o da filial — em `Cliente sem acesso ao uso de webservices Tecadi da filial 103`, o `103` corresponde a Itajaí 1.
+
+> ⚠️ O `tenantId` precisa corresponder à filial onde o dado consultado ou enviado existe. Enviar a filial errada faz a requisição falhar por falta de acesso (erro `001`) mesmo com o token correto, porque o contrato de webservice é verificado por filial — o mesmo cliente pode estar habilitado em uma e não em outra.
 
 ---
 

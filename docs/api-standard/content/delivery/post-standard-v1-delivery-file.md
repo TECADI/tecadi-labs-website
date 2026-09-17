@@ -26,7 +26,7 @@ Bearer Token (OAuth 2.0) — ver [Autenticação](../autenticacao.md).
 | --- | --- | --- |
 | `Authorization` | Sim | `Bearer <access_token>` |
 | `Content-Type` | Sim | `application/json` |
-| `tenantId` | Sim | `01,103` (ITAJAÍ) ou `01,117` (NAVEGANTES) |
+| `tenantId` | Sim | Empresa e filial de destino — ver [Autenticação](../autenticacao.md) |
 
 ---
 
