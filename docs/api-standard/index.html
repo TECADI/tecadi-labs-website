@@ -1,0 +1,84 @@
+<!--
+@description Documentação da API Standard TECADI
+@since       17/09/2026
+
+O conteúdo desta página vem dos arquivos Markdown em `content/`, interpretados
+em tempo de execução por `docs.js`. Para atualizar a documentação basta editar
+os .md — não há etapa de build.
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <title>API Standard TECADI — Documentação | tecadi.labs</title>
+  <meta name="description"
+    content="Documentação de integração da API Standard TECADI: autenticação OAuth 2.0, pedidos, remessas de entrada, notas fiscais, ordens de serviço, saldo e foto do estoque." />
+
+  <link rel="icon" href="../../assets/images/favicon.svg" sizes="any" type="image/svg+xml" />
+  <link rel="stylesheet" href="../../css/fonts.css" />
+  <link rel="stylesheet" href="../../css/colors.css" />
+  <link rel="stylesheet" href="docs.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="sidebar">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a class="brand" href="../../index.html">
+        <img src="../../assets/images/logo.svg" alt="tecadi.labs" />
+      </a>
+
+      <span class="brand-divider" aria-hidden="true"></span>
+      <span class="brand-product">API Standard</span>
+
+      <div class="search">
+        <input type="search" id="search" placeholder="Buscar rota, campo ou código de erro…"
+          autocomplete="off" spellcheck="false" aria-label="Buscar na documentação" />
+        <kbd class="search-hint">/</kbd>
+      </div>
+
+      <a class="topbar-action" href="../../index.html">Voltar ao site</a>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <nav class="nav" aria-label="Rotas da API"></nav>
+      <p class="search-empty" hidden>Nenhuma rota encontrada.</p>
+    </aside>
+
+    <main class="content" id="conteudo"></main>
+
+    <aside class="toc" aria-label="Nesta página">
+      <p class="toc-title">Nesta página</p>
+      <ul class="toc-list"></ul>
+    </aside>
+  </div>
+
+  <div class="sidebar-backdrop" hidden></div>
+
+  <footer class="docs-footer">
+    <p>
+      <span class="color-primary-text font-comfortaa-bold">tecadi.</span><span
+        class="color-secondary-text font-comfortaa-bold">labs</span>
+      — Rodovia BR-101, km 114, 2050, Santa Regina, Itajaí/SC
+    </p>
+    <p class="docs-footer-note">
+      Dúvidas sobre a integração? Fale com o time de projetos da TECADI.
+    </p>
+  </footer>
+
+  <script src="docs.js"></script>
+</body>
+
+</html>

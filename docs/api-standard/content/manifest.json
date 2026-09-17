@@ -1,0 +1,57 @@
+{
+  "title": "API Standard TECADI",
+  "subtitle": "Documentação de integração",
+  "groups": [
+    {
+      "title": "Comece por aqui",
+      "docs": [
+        { "file": "README.md", "id": "inicio", "title": "Visão geral" },
+        { "file": "autenticacao.md", "id": "autenticacao", "title": "Autenticação" }
+      ]
+    },
+    {
+      "title": "Pedidos",
+      "docs": [
+        { "file": "order/post-v2-order.md", "title": "Criar pedido" },
+        { "file": "order/get-v2-order.md", "title": "Listar pedidos" },
+        { "file": "order/get-v2-order-id.md", "title": "Consultar pedido" },
+        { "file": "order/put-v2-order-cancel.md", "title": "Cancelar pedido" },
+        { "file": "order/post-v2-order-tag.md", "title": "Enviar etiqueta" }
+      ]
+    },
+    {
+      "title": "Remessas de entrada",
+      "docs": [
+        { "file": "delivery/post-standard-v1-delivery.md", "title": "Criar remessa" },
+        { "file": "delivery/post-standard-v1-delivery-file.md", "title": "Criar remessa por CSV" }
+      ]
+    },
+    {
+      "title": "Notas fiscais",
+      "docs": [
+        { "file": "invoice/post-v1-invoice.md", "title": "Enviar nota fiscal" },
+        { "file": "invoice/put-v1-invoice-clean.md", "title": "Desvincular nota fiscal" },
+        { "file": "invoice/get-v1-invoice-files.md", "title": "Obter XML e PDF" }
+      ]
+    },
+    {
+      "title": "Ordens de serviço",
+      "docs": [
+        { "file": "service-order/get-v1-service-order-status.md", "title": "Consultar status" }
+      ]
+    },
+    {
+      "title": "Saldo de estoque",
+      "docs": [
+        { "file": "stock-balance/get-v1-stock-balance.md", "title": "Listar saldos" },
+        { "file": "stock-balance/get-v1-stock-balance-id.md", "title": "Saldo por produto" }
+      ]
+    },
+    {
+      "title": "Foto do estoque",
+      "docs": [
+        { "file": "stock-snapshot/get-standard-v1-stock-snapshot.md", "title": "Consultar foto do estoque" }
+      ]
+    }
+  ]
+}
