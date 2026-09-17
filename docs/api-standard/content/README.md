@@ -75,14 +75,6 @@ Fonte: `Controllers/stock_snapshot_standard_controller.tlpp`
 | --- | --- | --- |
 | `GET standard/v1/stock-snapshot` | [consultar-foto-do-estoque.md](stock-snapshot/get-standard-v1-stock-snapshot.md) | Saldo livre, empenhado e total com análise de divergências |
 
-### Listas genéricas — `generic-list/`
-
-Fonte: `Controllers/generic_list_controller.tlpp`
-
-| Rota | Documento | Finalidade |
-| --- | --- | --- |
-| `GET tecadi/public/lists` | [consultar-listas.md](generic-list/get-tecadi-public-lists.md) | Listas auxiliares (rota pública) |
-
 ---
 
 ## Convenções

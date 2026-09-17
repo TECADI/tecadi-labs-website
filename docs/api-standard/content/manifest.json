@@ -52,12 +52,6 @@
       "docs": [
         { "file": "stock-snapshot/get-standard-v1-stock-snapshot.md", "title": "Consultar foto do estoque" }
       ]
-    },
-    {
-      "title": "Listas genéricas",
-      "docs": [
-        { "file": "generic-list/get-tecadi-public-lists.md", "title": "Consultar listas" }
-      ]
     }
   ]
 }

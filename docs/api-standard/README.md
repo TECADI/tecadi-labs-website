@@ -17,7 +17,7 @@ docs/api-standard/
     manifest.json   # ordem e agrupamento das rotas no menu
     README.md       # "Visão geral"
     autenticacao.md
-    order/ delivery/ invoice/ service-order/ stock-balance/ stock-snapshot/ generic-list/
+    order/ delivery/ invoice/ service-order/ stock-balance/ stock-snapshot/
 ```
 
 ## Atualizar um documento existente
