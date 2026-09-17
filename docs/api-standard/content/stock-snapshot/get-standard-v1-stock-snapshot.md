@@ -1,6 +1,6 @@
 # API Standard TECADI — Foto do Estoque
 
-`GET standard/v1/stock-snapshot`
+`GET v1/stock-snapshot`
 
 Retorna uma fotografia do estoque do cliente em um instante, detalhando saldo livre, empenhado e total, e apontando divergências entre as diferentes visões de saldo.
 
@@ -13,8 +13,8 @@ Diferente de [`GET v1/stock-balance`](../stock-balance/get-v1-stock-balance.md),
 | | |
 | --- | --- |
 | **Método** | `GET` |
-| **Caminho** | `standard/v1/stock-snapshot` |
-| **URL completa** | `https://{domain}/rest/standard/v1/stock-snapshot` |
+| **Caminho** | `v1/stock-snapshot` |
+| **URL completa** | `https://{domain}/rest/v1/stock-snapshot` |
 | **Content-Type** | `application/json` |
 
 ## 2. Autenticação e cabeçalhos
@@ -39,7 +39,7 @@ Esta rota **não recebe parâmetros nem corpo de requisição**.
 **cURL**
 
 ```bash
-curl -X GET "https://{domain}/rest/standard/v1/stock-snapshot" \
+curl -X GET "https://{domain}/rest/v1/stock-snapshot" \
   -H "Authorization: Bearer <access_token>" \
   -H "tenantId: 01,103"
 ```
@@ -47,7 +47,7 @@ curl -X GET "https://{domain}/rest/standard/v1/stock-snapshot" \
 **HTTP puro**
 
 ```http
-GET /rest/standard/v1/stock-snapshot HTTP/1.1
+GET /rest/v1/stock-snapshot HTTP/1.1
 Host: {domain}
 Authorization: Bearer <access_token>
 tenantId: 01,103

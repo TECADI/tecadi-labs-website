@@ -1,8 +1,8 @@
 # API Standard TECADI — Criação de Remessa por Arquivo CSV
 
-`POST standard/v1/delivery/file`
+`POST v1/delivery/file`
 
-Cria uma remessa de entrada a partir de um arquivo **CSV** enviado em base64. Alternativa à rota [`POST standard/v1/delivery`](post-standard-v1-delivery.md), útil quando o cliente já produz o arquivo em seu próprio sistema.
+Cria uma remessa de entrada a partir de um arquivo **CSV** enviado em base64. Alternativa à rota [`POST v1/delivery`](post-standard-v1-delivery.md), útil quando o cliente já produz o arquivo em seu próprio sistema.
 
 Além de criar a remessa, o arquivo recebido é arquivado no servidor da TECADI.
 
@@ -13,8 +13,8 @@ Além de criar a remessa, o arquivo recebido é arquivado no servidor da TECADI.
 | | |
 | --- | --- |
 | **Método** | `POST` |
-| **Caminho** | `standard/v1/delivery/file` |
-| **URL completa** | `https://{domain}/rest/standard/v1/delivery/file` |
+| **Caminho** | `v1/delivery/file` |
+| **URL completa** | `https://{domain}/rest/v1/delivery/file` |
 | **Content-Type** | `application/json` |
 | **Charset da resposta** | `iso-8859-1` |
 
@@ -64,7 +64,7 @@ Se já existir um arquivo com o mesmo nome no diretório do cliente, a TECADI **
 **cURL**
 
 ```bash
-curl -X POST "https://{domain}/rest/standard/v1/delivery/file" \
+curl -X POST "https://{domain}/rest/v1/delivery/file" \
   -H "Authorization: Bearer <access_token>" \
   -H "Content-Type: application/json" \
   -H "tenantId: 01,103" \
@@ -80,7 +80,7 @@ curl -X POST "https://{domain}/rest/standard/v1/delivery/file" \
 **HTTP puro**
 
 ```http
-POST /rest/standard/v1/delivery/file HTTP/1.1
+POST /rest/v1/delivery/file HTTP/1.1
 Host: {domain}
 Authorization: Bearer <access_token>
 Content-Type: application/json

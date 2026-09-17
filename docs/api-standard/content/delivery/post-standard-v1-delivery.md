@@ -1,6 +1,6 @@
 # API Standard TECADI — Criação de Remessa
 
-`POST standard/v1/delivery`
+`POST v1/delivery`
 
 Cria uma remessa de entrada (recebimento) no WMS da TECADI, informando os itens que serão recebidos no armazém.
 
@@ -11,8 +11,8 @@ Cria uma remessa de entrada (recebimento) no WMS da TECADI, informando os itens 
 | | |
 | --- | --- |
 | **Método** | `POST` |
-| **Caminho** | `standard/v1/delivery` |
-| **URL completa** | `https://{domain}/rest/standard/v1/delivery` |
+| **Caminho** | `v1/delivery` |
+| **URL completa** | `https://{domain}/rest/v1/delivery` |
 | **Content-Type** | `application/json` |
 | **Charset da resposta** | `iso-8859-1` |
 
@@ -82,7 +82,7 @@ Bearer Token (OAuth 2.0) — ver [Autenticação](../autenticacao.md).
 **cURL**
 
 ```bash
-curl -X POST "https://{domain}/rest/standard/v1/delivery" \
+curl -X POST "https://{domain}/rest/v1/delivery" \
   -H "Authorization: Bearer <access_token>" \
   -H "Content-Type: application/json" \
   -H "tenantId: 01,103" \
@@ -98,7 +98,7 @@ curl -X POST "https://{domain}/rest/standard/v1/delivery" \
 **HTTP puro**
 
 ```http
-POST /rest/standard/v1/delivery HTTP/1.1
+POST /rest/v1/delivery HTTP/1.1
 Host: {domain}
 Authorization: Bearer <access_token>
 Content-Type: application/json
