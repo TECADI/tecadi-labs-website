@@ -666,22 +666,25 @@
       { name: "Diego Andrade", role: "Desenvolvedor", avatar: "./assets/images/team/diego.jfif" },
       { name: "Artur", role: "Suporte", avatar: "./assets/images/team/artur.png" },
       { name: "Bárbara Felix", role: "Gerente", avatar: "./assets/images/team/barbie.jfif" },
-      { name: "Vicente", role: "Suporte", avatar: "./assets/images/team/vicente.jfif" },
       { name: "Ruan", role: "Suporte", avatar: "./assets/images/team/ruan.png" },
       { name: "Alef", role: "Suporte", avatar: "./assets/images/team/alef.png" },
       { name: "Evandro", role: "Especialista de Infra", avatar: "./assets/images/team/evandro.png" },
+      { name: "João", role: "Suporte", avatar: "./assets/images/team/joao-suporte.jpg" },
+      { name: "Iverson", role: "Suporte", avatar: "./assets/images/team/iverson.jpeg" },
+      { name: "Denise", role: "Suporte", avatar: "./assets/images/team/denise.jfif" },
+      { name: "Gaya", role: "Suporte", avatar: "./assets/images/team/gaya.jfif" },
     ];
 
     const ourTeamContainer = document.getElementById("our-team");
     ourTeamContainer.classList.add("soccer-field");
 
-    // Formação tática: 1-4-5-4-4 (18 jogadores)
+    // Formação tática: 1-5-5-5-5 (21 jogadores)
     const formation = [
       { line: "goalkeeper", count: 1 },
-      { line: "defense", count: 4 },
+      { line: "defense", count: 5 },
       { line: "midfield", count: 5 },
-      { line: "midfield-attack", count: 4 },
-      { line: "attack", count: 4 }
+      { line: "midfield-attack", count: 5 },
+      { line: "attack", count: 5 }
     ];
 
     let playerIndex = 0;
